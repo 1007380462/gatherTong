@@ -178,7 +178,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
-
+        Caffeinated\Modules\ModulesServiceProvider::class,
     ],
 
     /*
@@ -227,6 +227,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'AdminLTE'=>Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+        'Module' => Caffeinated\Modules\Facades\Module::class,
     ],
 
 ];

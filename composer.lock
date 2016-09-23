@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ccbbc7756b9a9814d710147dad716abd",
-    "content-hash": "401b8cc774dec08d26bbcbd967a44b3a",
+    "hash": "6b2ed4c6e107946eab615f18db14aa81",
+    "content-hash": "61745ac4bd563191c508f45866d630f2",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
@@ -115,6 +115,60 @@
                 "user"
             ],
             "time": "2016-09-13 11:59:21"
+        },
+        {
+            "name": "caffeinated/modules",
+            "version": "v4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caffeinated/modules.git",
+                "reference": "594474a14244e813011a8c97581300642f5ad682"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caffeinated/modules/zipball/594474a14244e813011a8c97581300642f5ad682",
+                "reference": "594474a14244e813011a8c97581300642f5ad682",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "5.3.*",
+                "illuminate/database": "5.3.*",
+                "illuminate/filesystem": "5.3.*",
+                "illuminate/routing": "5.3.*",
+                "illuminate/support": "5.3.*",
+                "php": ">=5.6.4"
+            },
+            "suggest": {
+                "wikimedia/composer-merge-plugin": "Allows the ability to create and merge composer.json files for your individual modules for module-specific dependency management."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Caffeinated\\Modules\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shea Lewis",
+                    "email": "shea.lewis89@gmail.com"
+                }
+            ],
+            "description": "Laravel 5 Modules",
+            "keywords": [
+                "caffeinated",
+                "laravel",
+                "modules"
+            ],
+            "time": "2016-09-04 18:52:54"
         },
         {
             "name": "classpreloader/classpreloader",

@@ -40,6 +40,7 @@ return array(
     'Creativeorange\\Gravatar\\' => array($vendorDir . '/creativeorange/gravatar/src'),
     'ClassPreloader\\' => array($vendorDir . '/classpreloader/classpreloader/src'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
+    'Caffeinated\\Modules\\' => array($vendorDir . '/caffeinated/modules/src'),
     'App\\' => array($baseDir . '/app'),
     'Acacha\\User\\' => array($vendorDir . '/acacha/user/src'),
     'Acacha\\AdminLTETemplateLaravel\\' => array($vendorDir . '/acacha/admin-lte-template-laravel/src'),
