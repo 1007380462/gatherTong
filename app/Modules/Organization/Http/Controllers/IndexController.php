@@ -4,4 +4,10 @@ use App\Http\Controllers;
 
 class IndexController extends Controllers\Controller{
 
+    public function __construct(){
+
+    }
+    public function index(){
+
+    }
 }

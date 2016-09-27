@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b2ed4c6e107946eab615f18db14aa81",
-    "content-hash": "61745ac4bd563191c508f45866d630f2",
+    "hash": "86ca273d6dfe1588a5b6b35140f41bb9",
+    "content-hash": "d886d97f52dc29e71ae7a489dd4aa4ae",
     "packages": [
         {
             "name": "acacha/admin-lte-template-laravel",
-            "version": "3.0.12",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acacha/adminlte-laravel.git",
-                "reference": "2321961f3ee6ad6de1c5a8306fe4daf5075d5ff0"
+                "reference": "a5219d4dea89c96be637894d034b87e8a4240406"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/2321961f3ee6ad6de1c5a8306fe4daf5075d5ff0",
-                "reference": "2321961f3ee6ad6de1c5a8306fe4daf5075d5ff0",
+                "url": "https://api.github.com/repos/acacha/adminlte-laravel/zipball/a5219d4dea89c96be637894d034b87e8a4240406",
+                "reference": "a5219d4dea89c96be637894d034b87e8a4240406",
                 "shasum": ""
             },
             "require": {
@@ -60,7 +60,7 @@
                 "template",
                 "theme"
             ],
-            "time": "2016-09-19 09:32:49"
+            "time": "2016-09-26 15:30:00"
         },
         {
             "name": "acacha/user",

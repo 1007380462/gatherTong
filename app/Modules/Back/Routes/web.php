@@ -12,6 +12,8 @@
 */
 
 Route::group(['prefix' => 'back'], function() {
+    Route::get('/index/index','IndexController@index');
+
     Route::get('/', function() {
         dd('This is the Back module index page. Build something great!');
     });
