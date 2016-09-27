@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+      //  $this->middleware('auth');
     }
 
     /**
@@ -34,5 +34,15 @@ class HomeController extends Controller
     public function index()
     {
         return view('adminlte::home');
+    }
+
+
+
+    /**
+     * test whether work of serviceProvider
+     * test function
+     */
+    public function Test(){
+        app()->make('dataSafe')->callMe();
     }
 }

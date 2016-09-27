@@ -12,7 +12,6 @@
 */
 
 Route::group(['prefix' => 'front'], function() {
-    Route::get('/', function() {
-        dd('This is the Front module index page. Build something great!');
-    });
+    Route::get('/index/index','IndexController@index');
+
 });
