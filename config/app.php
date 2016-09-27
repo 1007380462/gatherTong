@@ -120,9 +120,10 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'log' => env('APP_LOG', 'daily'), //日志分割按照时间，时间间隔有log_max_files进行控制
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
+    'log_max_files'=>1,                //log is daily ,3o day is life
 
     /*
     |--------------------------------------------------------------------------
