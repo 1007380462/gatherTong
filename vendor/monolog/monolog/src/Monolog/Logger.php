@@ -306,7 +306,6 @@ class Logger implements LoggerInterface
         if (null === $handlerKey) {
             return false;
         }
-
         if (!static::$timezone) {
             static::$timezone = new \DateTimeZone(date_default_timezone_get() ?: 'UTC');
         }
@@ -327,11 +326,9 @@ class Logger implements LoggerInterface
             'datetime' => $ts,
             'extra' => array(),
         );
-
         foreach ($this->processors as $processor) {
             $record = call_user_func($processor, $record);
         }
-
         while ($handler = current($this->handlers)) {
             if (true === $handler->handle($record)) {
                 break;

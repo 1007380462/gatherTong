@@ -29,6 +29,19 @@ class StreamHandler extends AbstractProcessingHandler
     protected $useLocking;
     private $dirCreated;
 
+    /*******************/
+    /*store file resource,this is unused now.*/
+    private static $streamArr=array(
+        'error'=>null,
+        'info'=>null,
+        'debug'=>null,
+        'ALERT'=>null,
+        'WARNING'=>null,
+        'CRITICAL'=>null,
+        'NOTICE'=>null,
+        'EMERGENCY'=>null
+    );
+    /*******************/
     /**
      * @param resource|string $stream
      * @param int             $level          The minimum logging level at which this handler will be triggered
@@ -90,10 +103,23 @@ class StreamHandler extends AbstractProcessingHandler
      */
     protected function write(array $record)
     {
-        if (!is_resource($this->stream)) {
+
+            $pass=true;
+            if ($pass||!is_resource($this->stream)) {
             if (null === $this->url || '' === $this->url) {
                 throw new \LogicException('Missing stream url, the stream can not be opened. This may be caused by a premature call to close().');
             }
+            /******************************/
+            /*following code is to change the store path*/
+            $level=$record['level_name'];
+            $level=strtolower($level);
+            $level.='.log';
+            $expArr=explode('/',$this->url);
+            $arrLen=count($expArr);
+            $expArr[$arrLen-1]=$level;
+            $level=implode('/',$expArr);
+            $this->url=$level;
+            /*******************************/
             $this->createDir();
             $this->errorMessage = null;
             set_error_handler(array($this, 'customErrorHandler'));
@@ -112,7 +138,6 @@ class StreamHandler extends AbstractProcessingHandler
             // ignoring errors here, there's not much we can do about them
             flock($this->stream, LOCK_EX);
         }
-
         fwrite($this->stream, (string) $record['formatted']);
 
         if ($this->useLocking) {

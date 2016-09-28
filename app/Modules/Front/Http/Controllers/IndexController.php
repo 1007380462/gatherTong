@@ -18,9 +18,12 @@ class IndexController extends Controller
     public function index(){
        $classInstance=UserAdd::getInstance();
        $content=$classInstance->add();
-        \Log::info('message');
-        \Log::error('message');
+        \Log::error('error');
+          \Log::warning('warning');
 
+
+     //   \Log::info('info');
+      //  \Log::debug('debug');
         return $content;
     }
 }
